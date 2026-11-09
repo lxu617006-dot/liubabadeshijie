@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090a0c">
+  <meta name="theme-color" content="#17102d">
   <meta name="description" content="一个关于爱、温柔与真诚的小小空间。">
-  <title>我的爱情网站 · A Little Universe</title>
+  <title>星河予你 · A Little Universe</title>
   <style>
     :root{--bg:#090a0c;--panel:#111316;--line:rgba(255,255,255,.11);--muted:#92979f;--silver:#e8ebef;--white:#fff}
     *{box-sizing:border-box}
@@ -65,38 +65,75 @@
     @media(max-width:720px){.wrap{width:min(100% - 32px,560px)}header{height:64px}nav{gap:14px;font-size:10px}.hero{grid-template-columns:1fr;gap:5px;padding:70px 0 55px;min-height:auto}.visual{height:300px;grid-row:1}.orb-core{width:145px;height:145px}.orbit{width:270px}.side-note{display:none}.visual-label{right:4px;bottom:0}h1{font-size:58px;margin-top:22px}.lead{font-size:14px}.section{padding:55px 0}.section-head{display:block}.section-head p{margin-top:16px}.cards{grid-template-columns:1fr}.card{min-height:150px}.card h3{margin-top:22px}footer{flex-direction:column}}
     @media(max-width:390px){nav{gap:9px}.brand{font-size:11px}.brand .mark{width:24px;height:24px}h1{font-size:49px}}
   </style>
+
+  <style>
+    :root{--bg:#100b20;--panel:#1a1230;--line:rgba(220,197,255,.18);--muted:#b6a6d0;--silver:#f4edff;--white:#fff}
+    body{background:radial-gradient(ellipse at 50% 0%,#38245e 0%,#17102d 42%,#0c0918 100%);color:#f4edff}
+    body:before{background:radial-gradient(ellipse at 50% -10%,rgba(190,151,255,.25),transparent 52%),radial-gradient(ellipse at 85% 65%,rgba(116,79,181,.13),transparent 38%)}
+    .noise{opacity:.07}
+    .starfield{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.8;background-image:radial-gradient(2px 2px at 8% 18%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 22% 72%,#e8d7ff 50%,transparent 60%),radial-gradient(2px 2px at 42% 32%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 63% 12%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 81% 48%,#e7d4ff 50%,transparent 60%),radial-gradient(1px 1px at 92% 82%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 70% 88%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 14% 91%,#d8c2ff 50%,transparent 60%);background-size:100% 100%;animation:twinkle 5s ease-in-out infinite alternate}
+    .starfield:after{content:"";position:absolute;inset:0;background-image:radial-gradient(1px 1px at 30% 12%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 54% 62%,#fff 50%,transparent 60%),radial-gradient(1.5px 1.5px at 75% 24%,#e8d7ff 50%,transparent 60%),radial-gradient(1px 1px at 5% 52%,#fff 50%,transparent 60%);opacity:.7}
+    header{border-color:var(--line)}
+    .brand{color:#fff0ff}.mark{border-color:#d9baff;color:#f1dfff;box-shadow:0 0 18px rgba(190,143,255,.25)}
+    nav a:hover{color:#e7caff}
+    .eyebrow{color:#d5baff}.eyebrow:before{background:#c7a5f5}
+    h1{color:#fff7ff;text-shadow:0 0 35px rgba(191,148,255,.22)}h1 span{color:#c6a7ee}
+    .lead{color:#c2b4d8}
+    .btn{border-color:#e1caff;background:linear-gradient(135deg,#eadbff,#bd96ef);color:#24143d;box-shadow:0 8px 30px rgba(157,111,220,.18)}
+    .btn:hover{background:#f5eaff}.btn.secondary{background:rgba(255,255,255,.035);color:#eadbff;border-color:rgba(220,197,255,.35);box-shadow:none}.btn.secondary:hover{border-color:#d7b7ff;background:rgba(190,143,255,.1)}
+    .visual{isolation:isolate}.visual:before{content:"☾";position:absolute;top:12px;right:18px;color:#e7d7ff;font-size:42px;text-shadow:0 0 28px #c49aff;transform:rotate(-18deg)}
+    .orbit{border-color:rgba(211,178,255,.28);box-shadow:0 0 70px rgba(152,104,218,.08)}.orbit:before,.orbit:after{border-color:rgba(211,178,255,.16)}
+    .orbit-dot{background:#f3e8ff;box-shadow:0 0 18px #e7caff,0 0 35px #b78aff}
+    .orb-core{background:radial-gradient(circle at 32% 25%,#f4eaff 0,#c9a7f1 9%,#8d68bc 30%,#493269 58%,#211432 78%);box-shadow:0 0 80px rgba(174,126,239,.35),inset -20px -24px 40px rgba(13,7,26,.75)}
+    .orb-core:after{border-color:rgba(226,202,255,.4)}
+    .visual-label,.side-note{color:#a58bc9}
+    .section{border-color:var(--line)}.kicker{color:#b99bdf}h2{color:#f6edff}.section-head p{color:#b7a8ce}
+    .card{border-color:rgba(220,197,255,.18);background:linear-gradient(145deg,rgba(186,143,242,.12),rgba(255,255,255,.018));border-radius:16px;backdrop-filter:blur(8px)}
+    .card:after{border-color:rgba(216,188,255,.13)}.num{color:#b69ad8}.card h3{color:#f5eaff}.card p{color:#b9a9d0}
+    .quote{border-color:rgba(220,197,255,.2);border-radius:20px;background:linear-gradient(120deg,rgba(173,126,230,.13),rgba(255,255,255,.015));box-shadow:0 20px 80px rgba(0,0,0,.12)}
+    .quote .symbol{color:#c7a2f4}.quote p{color:#f0e5ff}.quote small{color:#ad96cb}
+    footer{border-color:var(--line);color:#9884b4}
+    .modal{background:rgba(9,5,19,.82)}.modal-box{background:#1b1230;border-color:rgba(220,197,255,.28);border-radius:20px;box-shadow:0 25px 100px #080411}.modal-box p{color:#c4b4dc}.close{border-color:var(--line);color:#eadbff;border-radius:8px}
+    @keyframes twinkle{from{opacity:.48}to{opacity:1}}
+    @keyframes meteor{0%{transform:translate(0,0) rotate(35deg);opacity:0}8%{opacity:1}35%{transform:translate(-420px,260px) rotate(35deg);opacity:0}100%{opacity:0}}
+    .meteor{position:fixed;top:10%;right:-10%;width:150px;height:1px;pointer-events:none;z-index:-1;background:linear-gradient(90deg,transparent,#eadbff,transparent);box-shadow:0 0 12px #d7b7ff;transform:rotate(35deg);animation:meteor 9s ease-in-out infinite}
+    @media(max-width:720px){.visual:before{top:0;right:20px;font-size:34px}.card{border-radius:14px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+  </style>
+
 </head>
 <body>
 <div class="noise"></div>
+<div class="starfield" aria-hidden="true"></div><div class="meteor" aria-hidden="true"></div>
 <div class="wrap">
   <header>
-    <div class="brand"><span class="mark">✦</span><span>A LITTLE UNIVERSE</span></div>
+    <div class="brand"><span class="mark">✦</span><span>LOVE UNDER THE STARS</span></div>
     <nav><a href="#home">首页</a><a href="#about">关于</a><a href="#support">支持</a></nav>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div>
-        <div class="eyebrow">A SPACE FOR LOVE</div>
-        <h1>我的爱情<span>小小宇宙。</span></h1>
-        <p class="lead">欢迎来到我的世界。这里收藏着温柔、真诚与每一个值得珍惜的瞬间。愿你在匆忙的生活里，也能遇见属于自己的光。</p>
+        <div class="eyebrow">A LOVE WRITTEN IN THE STARS</div>
+        <h1>把浪漫<span>写进星河。</span></h1>
+        <p class="lead">欢迎来到这片属于爱的星空。愿所有温柔都有回响，所有真心都被珍藏。抬头有星河，心中有你。</p>
         <div class="actions">
-          <a class="btn" href="#about">探索这个空间 ↗</a>
+          <a class="btn" href="#about">漫游星河 ↗</a>
           <button class="btn secondary" id="openPay">支持一下</button>
         </div>
       </div>
-      <div class="visual" aria-label="抽象银色星球装饰">
-        <div class="side-note">LOVE · LIGHT · FOREVER</div>
+      <div class="visual" aria-label="紫色星球与星环装饰">
+        <div class="side-note">YOU · ME · THE STARS</div>
         <div class="orbit"><i class="orbit-dot"></i></div>
         <div class="orb-core"></div>
-        <div class="visual-label">NO. 001 — MADE WITH HEART</div>
+        <div class="visual-label">A LITTLE GALAXY OF LOVE</div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="section-head">
-        <div><div class="kicker">A FEW WORDS</div><h2>关于这个小小空间</h2></div>
-        <p>不需要太多华丽的表达，真诚本身就有力量。希望每一次停留，都能感受到一点温暖。</p>
+        <div><div class="kicker">A FEW WORDS</div><h2>关于这片星空</h2></div>
+        <p>宇宙很大，温柔很小。但每一份真诚，都值得被星光照亮。</p>
       </div>
       <div class="cards">
         <article class="card"><div class="num">01 / SINCERITY</div><h3>保持真诚</h3><p>认真对待每一份心意，也认真生活里的每一天。</p></article>
@@ -108,13 +145,13 @@
     <section class="section" id="support">
       <div class="quote">
         <div class="symbol">“</div>
-        <p>谢谢你愿意来到这里。<br>每一份支持，都是继续创造美好的动力。</p>
-        <small>THANK YOU FOR BEING HERE</small>
+        <p>谢谢你，愿意在星河里停留。<br>每一份心意，都会成为这片星空继续闪耀的光。</p>
+        <small>MAY THE STARS BE WITH YOU</small>
         <div style="margin-top:25px"><button class="btn" id="openPay2">给我一点支持</button></div>
       </div>
     </section>
   </main>
-  <footer><span>© 2026 A LITTLE UNIVERSE</span><span>DESIGNED WITH SINCERITY · 祝你今天愉快</span></footer>
+  <footer><span>© 2026 A LITTLE UNIVERSE</span><span>MADE WITH LOVE · 愿你被温柔以待</span></footer>
 </div>
 
 <div class="modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="payTitle">
